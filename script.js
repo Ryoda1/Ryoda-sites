@@ -60,7 +60,7 @@ document.getElementById('copy-telegram-button').addEventListener('click', functi
     if (!feedback) {
         feedback = document.createElement('p');
         feedback.classList.add('copy-feedback');
-        feedback.textContent = 'Telegram handle copied!';
+        feedback.textContent = 'Сopied!';
         feedback.style.color = '#90EE90';  // Lighter green color
         feedback.style.marginTop = '10px';
         this.appendChild(feedback);
