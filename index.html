@@ -31,7 +31,6 @@
                 </svg>
                 ryoda@wp.pl
             </i>
-            <p id="copy-feedback" style="color: green; display: none; margin-top: 10px;">Email скопирован!</p>
         </button>
         <button class="transparent-button" id="copy-telegram-button">
             <i class="bi bi-telegram">
@@ -47,20 +46,6 @@
 </div>
 </div>
 
- <!-- Разметка модального окна -->
- <div class="modal fade" id="copyModal" tabindex="-1" aria-labelledby="copyModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="copyModalLabel">Информация</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                Email скопирован!
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="bottom-box">
     <div class="blurred-background ">
@@ -84,35 +69,6 @@
             </a>
         </div>            
     </div>    
-<script>
-    // Копирование email
-    document.getElementById('copy-email-button').addEventListener('click', () => {
-        const email = 'ryoda@wp.pl';
-        navigator.clipboard.writeText(email)
-            .then(() => {
-                const modal = new bootstrap.Modal(document.getElementById('copyModal'));
-                document.querySelector('#copyModal .modal-body').innerText = 'Email скопирован!';
-                modal.show();
-            })
-            .catch(err => {
-                console.error('Ошибка при копировании текста: ', err);
-            });
-    });
-
-    // Копирование Telegram ника
-    document.getElementById('copy-telegram-button').addEventListener('click', () => {
-        const telegramNick = '@Ryoday';
-        navigator.clipboard.writeText(telegramNick)
-            .then(() => {
-                const modal = new bootstrap.Modal(document.getElementById('copyModal'));
-                document.querySelector('#copyModal .modal-body').innerText = 'Telegram ник скопирован!';
-                modal.show();
-            })
-            .catch(err => {
-                console.error('Ошибка при копировании текста: ', err);
-            });
-    });
-
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
