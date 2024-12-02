@@ -68,7 +68,7 @@ document.getElementById('copy-telegram-button').addEventListener('click', functi
     if (!feedback) {
         feedback = document.createElement('p');
         feedback.classList.add('copy-feedback');
-        feedback.textContent = 'Telegram handle copied!';
+        feedback.textContent = 'Copied!';
         feedback.style.color = 'green';
         feedback.style.marginTop = '10px';
         this.appendChild(feedback);
@@ -112,7 +112,7 @@ document.getElementById('copy-email-button').addEventListener('click', function(
     if (!feedback) {
         feedback = document.createElement('p');
         feedback.classList.add('copy-feedback');
-        feedback.textContent = 'Email copied!';
+        feedback.textContent = 'Copied!';
         feedback.style.color = 'green';
         feedback.style.marginTop = '10px';
         this.appendChild(feedback);
