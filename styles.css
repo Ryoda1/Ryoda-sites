@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
   margin: 0;
   padding: 0;
@@ -211,6 +212,97 @@ button.transparent-button i svg {
     flex-direction: column;
     padding: 10px;
     align-items: stretch;
+  }
+}
+
+/* модалка */
+
+/* Стили для модального окна */
+.modal-custom {
+  background-color: rgba(0, 0, 0, 0.9); /* Темный фон */
+  border-radius: 15px; /* Округлые углы */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень */
+  border: none; /* Убираем возможные границы */
+  backdrop-filter: blur(10px); /* Блюр для фона */
+}
+
+/* Заголовок модалки */
+.modal-header-custom {
+  background-color: rgba(0, 0, 0, 0.8); /* Темный фон для шапки */
+  color: #fff; /* Белый текст */
+  border-bottom: none; /* Убираем границу снизу */
+  padding: 20px;
+  border-top-left-radius: 15px; /* Углы у шапки */
+  border-top-right-radius: 15px;
+  font-weight: 600; /* Жирный шрифт */
+}
+
+/* Содержимое модалки */
+.modal-body-custom {
+  background-color: rgba(0, 0, 0, 0.9); /* Тот же темный фон */
+  color: #fff; /* Белый текст */
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400; /* Легкий шрифт */
+  border-bottom-left-radius: 15px; /* Углы у тела */
+  border-bottom-right-radius: 15px;
+  backdrop-filter: blur(10px); /* Размытие фона */
+}
+
+.modal-footer {
+  background-color: rgba(0, 0, 0, 0.8); /* Темный фон */
+  border-top: none; /* Убираем границу сверху */
+  padding: 10px;
+}
+
+/* Кнопка закрытия */
+.btn-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+.btn-close:hover {
+  opacity: 1; /* Эффект нажатия на кнопку закрытия */
+}
+
+/* Убираем белые полосы и добавляем прозрачность */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.8); /* Темный фон для подложки */
+}
+
+/* Убираем белые полосы по краям */
+.modal-open .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.8); /* Используем тот же цвет фона */
+}
+
+/* Убираем лишние отступы */
+.modal-content {
+  border-radius: 15px !important;
+  overflow: hidden;
+}
+
+/* Анимация модалки */
+.modal.fade .modal-dialog {
+  transform: scale(0.9);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1); /* Модалка появляется с увеличением */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .modal-body-custom {
+    padding: 20px;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
   }
 }
 
