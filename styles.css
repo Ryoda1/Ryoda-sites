@@ -5,30 +5,51 @@ body {
   font-family: 'Poppins', sans-serif;
   background-image: url(backround.png);
   background-attachment: fixed;
-  color: #fff;
+  background-size: cover; /* Сделать фон по размеру экрана */
+  color: #fff; /* Белый текст по умолчанию */
+  height: 100vh; /* Задаем высоту экрана для правильного позиционирования */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1, h3, p {
+/* Заголовки *//* Общие стили */
+body {
   margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(backround.png);
+  background-attachment: fixed;
+  background-size: cover; /* Сделать фон по размеру экрана */
+  color: #fff; /* Белый текст по умолчанию */
+  height: 100vh; /* Задаем высоту экрана для правильного позиционирования */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-a {
-  text-decoration: none;
+
+/* Заголовки */
+/* Стили для тегов h1, h3 и класса .h3 */
+h1, h3, .h3 {
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Тень для текста */
+  color: #fff !important; /* Белый цвет текста */
 }
 
 
 h1 {
   font-size: 3rem;
-  color: #fff;
+  text-transform: uppercase; /* Сделаем заголовки более заметными */
+  letter-spacing: 1px; /* Расстояние между буквами */
 }
 
 h3 {
   font-size: 1.5rem;
-  color: #fff;
+  font-weight: 400; /* Немного уменьшаем жирность для улучшения читаемости */
 }
 
 p {
   font-size: 1rem;
-  color: #fff;
 }
 
 /* Центрирование содержимого */
@@ -39,15 +60,14 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.blurred-background {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  padding: 20px 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрируем блок */
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6); /* Прозрачный фон с затемнением */
+  backdrop-filter: blur(10px); /* Размытие фона */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Тень для выделения блока */
 }
 
 /* Кнопки */
@@ -58,9 +78,9 @@ button.transparent-button {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  padding: 10px 15px;
-  color: #fff;
-  font-size: 1rem;
+  padding: 12px 18px;
+  color: #fff; /* Белый текст для кнопок */
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -80,38 +100,32 @@ button.transparent-button i svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* Расстояние между кнопками */
+  gap: 15px;
   margin-top: 20px;
 }
 
 /* Секция ссылок */
-.button2-container {
+.button2-container-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  flex: 0 1 auto; /* Задаем гибкость для кнопок */
-}
-
-.button2-container-wrapper {
-  display: flex; /* Делаем дочерние элементы в один ряд */
-  justify-content: center; /* Выравниваем кнопки по центру */
-  gap: 20px; /* Добавляем расстояние между кнопками */
-  flex-wrap: wrap; /* Позволяем кнопкам переноситься на новую строку, если места не хватает */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .button2 {
   display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #fff; /* Белый текст для кнопок */
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   padding: 15px 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
-  width: 300px; /* Фиксированная ширина кнопки */
+  width: 300px;
+  margin: 10px;
+  text-align: left;
 }
 
 .button2:hover {
@@ -125,66 +139,59 @@ button.transparent-button i svg {
 .button2-icon {
   width: 40px;
   height: 40px;
-  margin-right: 15px; /* Расстояние между иконкой и текстом */
-  order: 1; /* Иконка всегда слева */
+  margin-right: 15px;
 }
 
 /* Текст внутри кнопки */
-.button2-text {
-  display: flex;
-  flex-direction: column; /* Для вертикального выравнивания текста */
-  text-align: left; /* Выравниваем текст по левой стороне */
-  order: 2; /* Текст после иконки */
-}
-
 .button2-text h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #fff;
 }
 
 .button2-text p {
   margin: 0;
   font-size: 0.9rem;
-  color: #fff;
 }
 
 /* Стрелка */
 .button-arrow {
   font-size: 1.5rem;
   color: #fff;
-  margin-left: auto; /* Отодвигаем стрелку вправо */
-  order: 3; /* Позиционируем стрелку справа */
+  margin-left: auto;
 }
 
 .button2:hover .button-arrow {
   color: #fff;
 }
 
-/* Убираем подчеркивание у всех ссылок внутри .button2 */
-.button2 a {
+/* Убираем подчеркивание у ссылок */
+.button2 a, .button-row a, .transparent-button a {
   text-decoration: none !important;
 }
 
-/* Убираем подчеркивание при наведении, фокусе и активации */
 .button2 a:hover,
 .button2 a:focus,
 .button2 a:active {
   text-decoration: none !important;
 }
 
-/* Убираем подчеркивание у любых ссылок внутри кнопок с дополнительными селекторами */
-.button2-container a,
-.button-row a,
-.transparent-button a {
-  text-decoration: none !important;
+@media (max-width: 768px) {
+  /* Адаптивность для мобильных */
+  .position-absolute {
+    padding: 20px;
+  }
+
+  .button2 {
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .button2-container-wrapper {
+    flex-direction: column;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
 }
 
-.button2-container a:hover,
-.button-row a:hover,
-.transparent-button a:hover {
-  text-decoration: none !important;
-}
-.button2 a, .button-row a, .transparent-button a {
-  text-decoration: none !important;
-}
