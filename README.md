@@ -1,2 +1,0 @@
-# Ryoda-sites
-my site
