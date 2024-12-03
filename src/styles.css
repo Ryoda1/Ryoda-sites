@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-image: url(backround.png);
+  background-image: url(../res/backround.png);
   overflow: clip;
   margin: 0pt;
   padding: 0;
