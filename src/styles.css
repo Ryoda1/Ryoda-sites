@@ -5,7 +5,8 @@ html {
 }
 
 body {
-  background-image: url(../res/backround.png);
+  background-image: url(../res/bg.jpg);
+  background-size: cover;
   overflow: clip;
   margin: 0pt;
   padding: 0;
@@ -214,5 +215,3 @@ button.transparent-button i svg {
 .button2 a, .button-row a, .transparent-button a {
   text-decoration: none !important;
 }
-
-
